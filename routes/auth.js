@@ -4,7 +4,7 @@ const jwt=require('jsonwebtoken');
 const User=require('../models/User');
 const router= express.Router();
 
-router.post('/register',async(req,res)=>{
+router.post('/registro',async(req,res)=>{
         const  {username,email,password}=req.body;
         try{
             const userExist=await User.findOne({email});
